@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp">
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="0dp"
+            android:layout_height="210dp"
+            android:layout_marginHorizontal="9dp"
+            android:layout_marginTop="9dp"
+            android:contentDescription="@string/item_overview_image_description"
+            android:scaleType="fitCenter"
+            android:src="@drawable/placeholder_news"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/item_title"
+            style="@style/Theme.Newspaper.ArticleTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingHorizontal="9dp"
+            android:text="@string/dummy_text"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_image" />
+
+        <TextView
+            android:id="@+id/item_description"
+            style="@style/Theme.Newspaper.ArticleDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:ellipsize="end"
+            android:maxLines="10"
+            android:paddingHorizontal="9dp"
+            android:text="@string/dummy_text"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_title" />
+
+        <View
+            style="@style/Theme.Newspaper.Line"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="6dp"
+            app:layout_constraintTop_toBottomOf="@id/item_description" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
